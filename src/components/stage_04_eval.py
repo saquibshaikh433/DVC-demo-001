@@ -49,8 +49,8 @@ def main(config_path):
              "mae": mae,
              "r2": r2}
     
-    save_json(artifact["METRICS_JSON"], score)
-    logging.info("model eval succesfull and store score at {}".format(artifact["METRICS_JSON"]))
+    save_json(config["scores"], score)
+    logging.info("model eval succesfull and store score at {}".format(config["scores"]))
     
     
 if __name__ == '__main__':

@@ -83,12 +83,12 @@ stages:
       md5: 3a3eef9f920deae72cb9bcd7b91231f1
       size: 28169
     - path: src/components/stage_04_eval.py
-      md5: 18cf1cce2ef8ff4d8b344c16b16e7f33
-      size: 2305
+      md5: aeb14213a69715d76767e5a35bff7f0a
+      size: 2289
     - path: src/utils/common.py
       md5: d162961d817182441383bdb0e674e685
       size: 675
     outs:
-    - path: score.json
+    - path: scores.json
       md5: cd7c1285b18436f2a38676bc2adc0f77
       size: 102

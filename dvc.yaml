@@ -42,7 +42,7 @@ stages:
       - artifacts/split_data/test.csv
       - artifacts/model/model.pkl
     metrics:
-      - score.json:
+      - scores.json:
           cache: false
       
 
