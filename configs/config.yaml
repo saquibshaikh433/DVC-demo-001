@@ -11,6 +11,7 @@ artifacts:
   SPLIT_DATA_DIR: split_data
   TRAIN_DATA: train.csv
   TEST_DATA: test.csv
+  METRICS_JSON: score.json
 
 
 
