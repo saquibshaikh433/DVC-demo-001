@@ -1,8 +1,37 @@
 # add stages here 
-# stages:
-#   stage_name:
-#     cmd: python src/stage_01______.py
-#     deps:
-#     - src/stage_01______.py
-#     outs:
-#     - output_data_of_file_path
+stages:
+  data_ingestion:
+    cmd: python src/components/stage_load_save.py
+    deps:
+    - src/components/stage_load_save.py
+    - src/utils/common.py
+    outs:
+    - artifacts/raw_data/main.csv
+
+  split_data:
+    cmd: python src/components/stage_02_data_split.py
+    deps:
+      - src/components/stage_02_data_split.py
+      - src/utils/common.py
+      - artifacts/raw_data/main.csv
+    params:
+      - hyper_parameters.split_ratio
+      - hyper_parameters.random_state
+    outs:
+      - artifacts/split_data/train.csv
+      - artifacts/split_data/test.csv
+
+  train:
+    cmd: python src/components/stage_03_train.py
+    deps:
+      - src/components/stage_02_data_split.py
+      - src/utils/common.py
+      - artifacts/split_data/train.csv
+    params:
+      - model_params.ElasticNet.alpha
+      - model_params.ElasticNet.l1_ratio
+      - hyper_parameters.random_state
+    outs:
+      - artifacts/model/model.pkl
+      
+

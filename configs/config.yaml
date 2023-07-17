@@ -4,8 +4,14 @@ data_source: http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quali
 
 artifacts:
   ARTIFACTS_DIR: artifacts
+  RAW_DATA_DIR: raw_data
+  RAW_DATA_FILE: main.csv
   TRAINED_MODEL_DIR: model
-  BASE_MODEL_DIR: base_model
+  MODEL_FILE_NAME: model.pkl
+  SPLIT_DATA_DIR: split_data
+  TRAIN_DATA: train.csv
+  TEST_DATA: test.csv
+
 
 
 

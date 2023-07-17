@@ -4,6 +4,8 @@ dvc
 pandas
 numpy
 PyYAML
+Scikit-learn
+fsspec==2022.7.1
 
 ### local packages -
-# -e . # << uncomment this to install from setup.py
+-e . # << uncomment this to install from setup.py
