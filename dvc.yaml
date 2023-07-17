@@ -12,7 +12,6 @@ stages:
     cmd: python src/components/stage_02_data_split.py
     deps:
       - src/components/stage_02_data_split.py
-      - src/components/stage_load_save.py
       - src/utils/common.py
       - artifacts/raw_data/main.csv
     params:
@@ -25,7 +24,6 @@ stages:
   train:
     cmd: python src/components/stage_03_train.py
     deps:
-      - src/components/stage_02_data_split.py
       - src/components/stage_03_train.py
       - src/utils/common.py
       - artifacts/split_data/train.csv
