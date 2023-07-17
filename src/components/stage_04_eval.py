@@ -8,7 +8,7 @@ from src.utils.common import read_yaml, create_directories, save_json
 import random
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import ElasticNet
-from sklearn.metrics import mean_squared_log_error,mean_absolute_error, r2_score
+from sklearn.metrics import mean_squared_error,mean_absolute_error, r2_score
 import joblib
 
 
@@ -22,7 +22,7 @@ logging.basicConfig(
     )
 
 def eval_matrics(actual, predicted):
-    rmse = np.sqrt(mean_squared_log_error(actual, predicted))
+    rmse = np.sqrt(mean_squared_error(actual, predicted))
     mae = mean_absolute_error(actual, predicted)
     r2 = r2_score(actual, predicted)
     return rmse, mae, r2
