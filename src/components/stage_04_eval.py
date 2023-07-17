@@ -47,7 +47,7 @@ def main(config_path):
     rmse, mae, r2 = eval_matrics(y_test, pred)
     score = {"rmse": rmse,
              "mae": mae,
-             "r2_score": r2}
+             "r2": r2}
     
     save_json(artifact["METRICS_JSON"], score)
     logging.info("model eval succesfull and store score at {}".format(artifact["METRICS_JSON"]))

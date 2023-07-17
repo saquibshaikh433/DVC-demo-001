@@ -40,11 +40,11 @@ stages:
     cmd: python src/components/stage_04_eval.py
     deps:
       - src/components/stage_04_eval.py
-      - src/components/stage_03_train.py
       - src/utils/common.py
       - artifacts/split_data/test.csv
       - artifacts/model/model.pkl
-    outs:
-      - score.json
+    metrics:
+      - score.json:
+          cache: false
       
 

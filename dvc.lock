@@ -85,16 +85,13 @@ stages:
     - path: artifacts/split_data/test.csv
       md5: 3a3eef9f920deae72cb9bcd7b91231f1
       size: 28169
-    - path: src/components/stage_03_train.py
-      md5: 10f4a07a9feb8248565c8537e65583e2
-      size: 2278
     - path: src/components/stage_04_eval.py
-      md5: fa468f18c934a84799d2805126434e18
-      size: 2311
+      md5: 18cf1cce2ef8ff4d8b344c16b16e7f33
+      size: 2305
     - path: src/utils/common.py
       md5: d162961d817182441383bdb0e674e685
       size: 675
     outs:
     - path: score.json
-      md5: 771a5e0736dbc0805875450668d15cb1
-      size: 107
+      md5: 3764f2b6c219229334047f0b7d7e3f20
+      size: 101
